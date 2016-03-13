@@ -23,7 +23,7 @@ add_executable(make-box make-box.cpp)
 target_link_libraries(make-box ${ARMADILLO_LIBRARIES})
 
 add_executable(dispersive dispersive.cpp)
-target_link_libraries(dispersive pme ${ARMADILLO_LIBRARIES} ${FFTW_LDFLAGS} ${FFTW_LDFLAGS_OTHER} -lfftw3_omp)
+target_link_libraries(dispersive pme ${ARMADILLO_LIBRARIES} ${FFTW_LDFLAGS} ${FFTW_LDFLAGS_OTHER} -lfftw3_threads)
 
 add_executable(run-pme run-pme.cpp)
-target_link_libraries(run-pme pme ${ARMADILLO_LIBRARIES} ${FFTW_LDFLAGS} ${FFTW_LDFLAGS_OTHER} -lfftw3_omp)
+target_link_libraries(run-pme pme ${ARMADILLO_LIBRARIES} ${FFTW_LDFLAGS} ${FFTW_LDFLAGS_OTHER} -lfftw3_threads)
